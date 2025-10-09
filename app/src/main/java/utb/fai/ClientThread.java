@@ -29,7 +29,7 @@ public class ClientThread implements Runnable {
             while ((buffer = this.reader.readLine()) != null) {
                 System.out.println("Received: " + buffer);
                 
-                writer.write("Echo: " + buffer + "\r\n");
+                writer.write(buffer + "\r\n");
                 writer.flush();
             }
         } catch (IOException e) {
